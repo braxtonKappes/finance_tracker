@@ -1,8 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from .. import schemas, crud, database
+from ..utils import get_current_user
 
-router = APIRouter(prefix="/transactions")
+router = APIRouter(prefix="/transactions", tags=["transactions"])
 
 def get_db():
     db = database.SessionLocal()
@@ -12,11 +13,16 @@ def get_db():
         db.close()
 
 @router.post("/", response_model=schemas.TransactionOut)
-def add_tx(tx: schemas.TransactionCreate, db: Session = Depends(get_db)):
-    user_id = 1  # Temporary until JWT setup
+def create_transaction(
+    tx: schemas.TransactionCreate,
+    db: Session = Depends(get_db),
+    user_id: int = Depends(get_current_user)
+):
     return crud.create_transaction(db, user_id, tx)
 
 @router.get("/", response_model=list[schemas.TransactionOut])
-def get_txs(db: Session = Depends(get_db)):
-    user_id = 1
+def read_transactions(
+    db: Session = Depends(get_db),
+    user_id: int = Depends(get_current_user)
+):
     return crud.get_transactions(db, user_id)
