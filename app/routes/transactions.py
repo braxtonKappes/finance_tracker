@@ -26,3 +26,20 @@ def read_transactions(
     user_id: int = Depends(get_current_user)
 ):
     return crud.get_transactions(db, user_id)
+
+@router.put("/{tx_id}", response_model=schemas.TransactionOut)
+def update_transaction(
+    tx_id: int,
+    updated_tx: schemas.TransactionCreate,
+    db: Session = Depends(get_db),
+    user_id: int = Depends(get_current_user)
+):
+    return crud.update_transaction(db, user_id, tx_id, updated_tx)
+
+@router.delete("/{tx_id}")
+def delete_transaction(
+    tx_id: int,
+    db: Session = Depends(get_db),
+    user_id: int = Depends(get_current_user)
+):
+    return crud.delete_transaction(db, user_id, tx_id)
