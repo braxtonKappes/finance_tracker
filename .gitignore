@@ -20,3 +20,5 @@ env/
 
 # Alembic (if migrations are auto-generated)
 alembic/versions/*.pyc
+
+node_modules
