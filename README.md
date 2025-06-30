@@ -52,9 +52,8 @@ This application simulates a personal finance platform. Users can:
 ### Frontend Setup
 
 1. Clone the repository
-
-git clone https://github.com/yourusername/finance-tracker.git
-cd finance-tracker/frontend
+    git clone https://github.com/yourusername/finance-tracker.git
+    cd finance-tracker/frontend
 
 2. Install Frontend Dependencies
 
