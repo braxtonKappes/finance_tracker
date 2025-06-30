@@ -26,7 +26,6 @@ function Login({ onLogin }) {
       localStorage.setItem("access_token", data.access_token);
 
       if (res.ok) {
-        onLogin();
         navigate("/dashboard");
       }
     } catch (err) {
