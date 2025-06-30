@@ -100,4 +100,4 @@ Location: Wind Lake, WI
 
 Email: braxtonkappes@gmail.com
 
-LinkedIn: [\[Your LinkedIn URL\]](https://www.linkedin.com/in/boydbraxtonkappes/)
+LinkedIn: [\[My LinkedIn\]](https://www.linkedin.com/in/boydbraxtonkappes/)
