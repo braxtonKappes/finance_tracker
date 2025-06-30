@@ -53,6 +53,51 @@ This application simulates a personal finance platform. Users can:
 
 1. Clone the repository
 
-```bash
 git clone https://github.com/yourusername/finance-tracker.git
 cd finance-tracker/frontend
+
+2. Install Frontend Dependencies
+
+npm install
+
+3. Initialize Tailwind (if not already initialized)
+
+npx tailwindcss init -p
+
+Update tailwind.config.js:
+    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]
+
+Ensure index.css includes:
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+4. Start the Frontend
+npm run dev
+
+5. Run the Backend (FastAPI)
+In a separate terminal:
+    uvicorn main:app --reload --port 8000
+
+## File Structure Overview
+finance-tracker/
+├── frontend/
+│   ├── components/
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   └── Dashboard.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+└── backend/
+    └── main.py
+
+## About the Developer
+Boyd “Braxton” Kappes
+Software Engineer with a focus on full-stack web development, blending React + Tailwind on the frontend and Python/FastAPI on the backend.
+
+Location: Wind Lake, WI
+
+Email: braxtonkappes@gmail.com
+
+LinkedIn: [\[Your LinkedIn URL\]](https://www.linkedin.com/in/boydbraxtonkappes/)
