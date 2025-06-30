@@ -79,19 +79,6 @@ npm run dev
 In a separate terminal:
     uvicorn main:app --reload --port 8000
 
-## File Structure Overview
-finance-tracker/
-├── frontend/
-│   ├── components/
-│   │   ├── Login.jsx
-│   │   ├── Signup.jsx
-│   │   └── Dashboard.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-└── backend/
-    └── main.py
-
 ## About the Developer
 Boyd “Braxton” Kappes
 Software Engineer with a focus on full-stack web development, blending React + Tailwind on the frontend and Python/FastAPI on the backend.
